@@ -53,12 +53,17 @@ verification.addEventListener("click", function() {
 
     if (validate) {
         alert("Verification successful!");
-        document.getElementById("verification").reset();
-        // Alternatively, clear the error messages if needed
+        // Reset the password fields and error message
+        password.value = "";
+        reenter.value = "";
+       
         document.querySelector(".lowercase").style.display = "none";
         document.querySelector(".uppercase").style.display = "none";
         document.querySelector(".number").style.display = "none";
         document.querySelector(".character").style.display = "none";
         document.querySelector(".passworderror").style.display = "none";
+        document.getElementById("verification").reset();
     }
+
+   
 });
